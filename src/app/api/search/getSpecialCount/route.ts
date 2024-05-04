@@ -1,6 +1,6 @@
 import { getPostFile, getSpecialPosts } from "@/lib/api";
 import { INSPECT_MAX_BYTES } from "buffer";
-
+export const dynamic = 'force-dynamic';
 export async function GET(request: any) {
     console.log("It works!");
     const { searchParams } = new URL(request.url);

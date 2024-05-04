@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/api";
-
+export const dynamic = 'force-dynamic';
 export async function GET(request: any) {
   console.log("It works!");
   const { searchParams } = new URL(request.url);
