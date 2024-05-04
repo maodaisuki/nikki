@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: #FFFFFF;
+    --foreground: #000000;
+    --primary-background: #F5F6F7;
+    --primary-foreground: #000000;
+    --card-background: #fff1ed;
+    --card-foreground: #e6521e;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html {
+  word-break: break-all;
 }
 
+body {
+  margin: 0;
+  background-color: var(--background);
+}
+
+/* 自定义工具类 */
 @layer utilities {
-  .text-balance {
+  /* .text-balance {
     text-wrap: balance;
+  } */
+
+  .header-title {
+    background: url('../../public/header.png') no-repeat top left;
+    background-size: contain;
+  }
+
+  .notfound {
+    background: url('../../public/NotFound.png') no-repeat top left;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .ui-hr {
+    @apply h-px block opacity-40 -mx-2.5 my-0 border-0;
+    background: #e6521e;
+    background: linear-gradient(
+      to right,
+      rgba(230, 82, 30, 0) 0%,
+      rgba(230, 82, 30, 0.5) 10%,
+      rgba(230, 82, 30, 0.8) 50%,
+      rgba(230, 82, 30, 0.5) 90%,
+      rgba(230, 82, 30, 0) 100%
+    );
+  }
+
+  .collapseButton {
+    color: rgb(0, 157, 255);
   }
 }

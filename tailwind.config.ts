@@ -7,6 +7,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      'background': 'var(--background)',
+      'foreground': 'var(--foreground)',
+      'primary-background': 'var(--primary-background)',
+      'primary-foreground':'var(--primary-foreground)',
+      'card-background': 'var(--card-background)',
+      'card-foreground': 'var(--card-foreground)',
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
