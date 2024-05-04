@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
+import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +21,9 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-primary-background w-full`}>
         <div className="bg-background mx-auto w-full max-w-[800px] p-[20px]">
-          { children }
+          <Suspense>
+            { children }
+          </Suspense>
         </div>
       </body>
     </html>
