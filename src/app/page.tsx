@@ -10,7 +10,7 @@ export default function Home() {
   const searchParams = useSearchParams();
   let page = searchParams?.get('page') !== null ? parseInt(searchParams!.get('page')!.toString()) : 1;
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/getAllCount`)
+    fetch(`/api/getAllCount`)
       .then((res) => res.json())
       .then((data) => {
         setAllCount(data);
