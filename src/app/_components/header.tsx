@@ -9,7 +9,7 @@ const Header = () => {
     const  submitSearch = (event: any) => {
         event.preventDefault();
         const query = event.target.querySelector('input[name="query"]').value;
-        router.push(`${process.env.NEXT_PUBLIC_BASE_PATH}/search?query=${query}`);
+        router.push(`/search?query=${query}`);
     }
     return (
         <header className="w-full h-[auto] mb-[30px]">
