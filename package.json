@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "^14.3.0-canary.39",
+    "next": "^13.0.6",
     "react": "^18",
     "react-dom": "^18",
     "remark": "^15.0.1",
