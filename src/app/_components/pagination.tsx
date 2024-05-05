@@ -11,7 +11,7 @@ const Pagination = ({ page }: Props) => {
     const [posts, setPosts] = useState<any>(null);
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/getAllPosts?page=${page}`)
+        fetch(`/api/getAllPosts?page=${page}`)
             .then((res) => res.json())
             .then((data) => {
                 setPosts(data);

@@ -15,7 +15,7 @@ const SearchPagination = ({ page, allCount }: Props) => {
     const [posts, setPosts] = useState<any>(null);
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/search?query=${query}&page=${page}`)
+        fetch(`/api/search?query=${query}&page=${page}`)
             .then((res) => res.json())
             .then((data) => {
                 setPosts(data);

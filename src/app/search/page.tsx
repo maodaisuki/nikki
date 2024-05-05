@@ -11,7 +11,7 @@ const SearchPage = () => {
     let page = searchParams?.get('page') !== null ? parseInt(searchParams!.get('page')!.toString()) : 1;
     const [allCount, setAllCount] = useState<any>(null);
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/api/search/getSpecialCount?query=${query}`)
+        fetch(`/api/search/getSpecialCount?query=${query}`)
             .then((res) => res.json())
             .then((data) => {
                 setAllCount(data);
