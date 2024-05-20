@@ -1,3 +1,5 @@
+Theme refer to [创作者日记-京阿尼笨蛋日常](https://kyoani.cn/anibaka?traned=1&sort=modified%2Cdesc).
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
